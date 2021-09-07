@@ -1,6 +1,14 @@
 import styled from "styled-components";
+import Head from "next/head";
+import { Button } from "@material-ui/core";
+import { auth } from "../firebase";
 
 function login() {
+
+    const signIn = () => {
+        auth.signInWithPopup(provider).catch(alert);
+    }
+
     return (
         <Container>
             <Head>
@@ -9,7 +17,7 @@ function login() {
 
             <LoginContainer>
                 <Logo />
-                <Button variant="outlined">Sign in with Google</Button>
+                <Button onClick={signIn} variant="outlined">Sign in with Google</Button>
             </LoginContainer>
         </Container>
 
