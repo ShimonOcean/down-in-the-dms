@@ -1,12 +1,19 @@
+import { Circle } from "better-react-spinkit";
+
 function Loading() {
     return (
-        <div>
-            <img 
-                src=""
-                alt=""
-                height={200}
+        <center style={{ display: "grid", placeItems: "center", height: "100vh"}}>
+            <div>
+                <img 
+                    src=""
+                    alt=""
+                    height={200}
+                    style={{ marginBottom: 10 }}
                 />
-        </div>
+                <Circle color="@3CBC28" />  
+            </div>
+        </center>
+
     )
 }
 
