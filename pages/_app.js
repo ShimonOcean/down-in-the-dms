@@ -6,6 +6,12 @@ import login from './login';
 function MyApp({ Component, pageProps }) {
   const [user, loading] = useAuthState(auth);
 
+  useEffect(() => {
+    if (user) {
+      db.collection('users')
+    }
+  }, [user])
+
   if (loading) return <Loading />;
 
   if (!user) return <login />
